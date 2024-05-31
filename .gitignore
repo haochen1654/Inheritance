@@ -34,3 +34,4 @@
 # Vs Code
 [bB]uild/
 .vscode/
+.editorconfig

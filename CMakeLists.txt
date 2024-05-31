@@ -11,6 +11,7 @@ project(Inheritance VERSION 1.0)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -20,8 +21,17 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
+# Add source to this library
+add_library(
+  Shape
+  "shape.h" 
+)
+
 # Add source to this project's executable.
 add_executable (
     Inheritance
     "main.cpp" 
 )
+
+set_target_properties(Shape PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries(Inheritance Shape)
