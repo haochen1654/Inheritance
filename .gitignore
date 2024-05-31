@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# Vs Code
+[bB]uild/
+.vscode/
