@@ -1,7 +1,5 @@
-load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
 load("@rules_cc//cc:cc_library.bzl", "cc_library")
-
-package(default_visibility = ["//visibility:public"])
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
 
 cc_library(
     name = "game_charactor",
@@ -11,5 +9,5 @@ cc_library(
 cc_binary(
     name = "inheritance_main",
     srcs = ["main.cpp"],
-      deps = ["//:game_charactor"],
+    deps = [":game_charactor"],
 )
