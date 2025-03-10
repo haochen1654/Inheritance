@@ -35,3 +35,6 @@
 [bB]uild/
 .vscode/
 .editorconfig
+
+# Bazel
+bazel-*
